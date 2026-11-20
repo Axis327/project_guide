@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1125" width="100%" height="100%" id="axis-floorplan-l1">
+  <defs>
+    <style>
+      .bg-canvas { fill: #f4f5f7; }
+      .walkway-floor { fill: #ffffff; stroke: #dcdde0; stroke-width: 1.5; }
+      .zone-non-public { fill: #f8eed9; stroke: #ebd2a0; stroke-width: 1.5; }
+      .zone-anchor { fill: #f3f3f2; stroke: #c5c6c8; stroke-width: 2; }
+      .zone-tenant { fill: #f5f5f4; stroke: #c8c9cb; stroke-width: 1.5; }
+      .zone-tenant-emphasized { fill: #dfdfe1; stroke: #b2b4b8; stroke-width: 1.8; }
+      .zone-kiosk { fill: #efefef; stroke: #b0b2b5; stroke-width: 1.5; }
+      .zone-washroom { fill: #d8f1fb; stroke: #9ecae1; stroke-width: 1.8; }
+      .zone-connector { fill: #dce3ea; stroke: #9fb0c2; stroke-width: 1.8; }
+      .perimeter-wall { fill: none; stroke: #5a636e; stroke-width: 10; stroke-linejoin: miter; }
+    </style>
+  </defs>
+
+  <!-- 1. BACKGROUND -->
+  <rect id="bg-canvas-l1" class="bg-canvas" x="0" y="0" width="2000" height="1125" />
+
+  <!-- 2. WALKABLE FLOORPRINT (s_593eeadd5170d16f2c0000a0) -->
+  <g id="layer-walkways-l1">
+    <path id="walkway-concourse-l1" class="walkway-floor" d="
+      M 88,215 L 304,215 L 316,228 L 382,228 L 394,215 L 568,215
+      L 568,238 L 850,238 L 850,188 L 1040,188 L 1110,118 L 1110,36
+      L 1456,36 L 1456,188 L 1516,188 L 1516,228 L 1700,228 L 1700,188
+      L 1948,188 L 1948,380 L 1930,460 L 1930,620 L 1890,730 L 1710,730
+      L 1630,750 L 1516,750 L 1516,734 L 1236,734 L 1236,808 L 1276,842
+      L 1358,842 L 1358,856 L 1394,856 L 1394,874 L 1380,874 L 1380,938
+      L 1360,938 L 1360,966 C 1320,1012 1265,1035 1148,1048 L 1148,1056
+      L 1030,1056 L 1030,1042 C 920,1032 845,992 800,930 L 800,894
+      L 776,894 L 776,842 L 844,842 L 870,818 L 924,818 L 950,792
+      L 950,734 L 568,734 L 568,768 L 476,768 L 414,744 L 340,744
+      L 278,768 L 126,768 L 126,434 L 24,352 L 24,328 L 88,328 Z
+    " />
+  </g>
+
+  <!-- 3. NON-PUBLIC / SERVICE CORRIDORS (Tan Zones) -->
+  <g id="layer-non-public-l1">
+    <polygon id="np-l1-nw-1" class="zone-non-public" points="
+      642,238 686,238 686,342 642,342
+    " />
+    <polygon id="np-l1-nw-2" class="zone-non-public" points="
+      732,238 858,238 858,312 804,312 804,266 732,266
+    " />
+    <polygon id="np-l1-ne" class="zone-non-public" points="
+      1222,246 1446,246 1446,188 1516,188 1516,228 1700,228 1700,188 1948,188
+      1948,380 1920,380 1920,204 1700,204 1700,364 1568,364 1568,468 1516,468
+      1516,246 1456,246 1456,282 1222,282
+    " />
+    <polygon id="np-l1-sw" class="zone-non-public" points="
+      760,704 836,704 836,724 904,724 904,742 950,742 950,792
+      924,818 870,818 844,842 776,842 776,894 800,894 800,882
+      870,882 870,842 930,842 930,798 870,798 870,734 760,734
+    " />
+    <polygon id="np-l1-se" class="zone-non-public" points="
+      1336,742 1336,718 1372,718 1372,690 1404,690 1404,664 1436,664
+      1436,734 1336,734
+    " />
+  </g>
+
+  <!-- 4. ANCHOR TENANT ZONES (#layer-anchors-l1) -->
+  <g id="layer-anchors-l1">
+    <!-- West Anchor Lower Level (s_593eeadd5170d16f2c0000a4) -->
+    <polygon id="zone-west-anchor-l1" class="zone-anchor" points="
+      88,215 304,215 316,228 382,228 394,215 568,215
+      568,768 476,768 414,744 340,744 278,768 126,768
+      126,434 24,352 24,328 88,328
+    " />
+    <!-- Sport Chek (s_593eeadd5170d16f2c0000a5) -->
+    <polygon id="zone-sport-chek" class="zone-anchor" points="
+      1110,36 1446,36 1446,120 1392,120 1392,134 1160,134 1160,118 1110,118
+    " />
+    <!-- H&M (s_593eeadd5170d16f2c0000a6) -->
+    <polygon id="zone-hm" class="zone-anchor" points="
+      1160,134 1392,134 1392,120 1446,120 1446,246 1222,246 1222,412 1188,412 1160,384
+    " />
+    <!-- GoodLife Fitness (s_5cc21b10fd8e3c6753000002) -->
+    <polygon id="zone-goodlife" class="zone-anchor" points="
+      1700,204 1920,204 1920,468 1568,468 1568,364 1700,364
+    " />
+    <!-- Mark's (s_5cc21a28fd8e3c6753000000) -->
+    <polygon id="zone-marks" class="zone-anchor" points="
+      1516,468 1920,468 1920,620 1890,730 1516,730
+    " />
+    <!-- Shoppers Drug Mart (s_593eeadd5170d16f2c0000a7) -->
+    <polygon id="zone-shoppers-drug-mart" class="zone-anchor" points="
+      1118,598 1318,598 1318,664 1404,664 1404,690 1372,690 1372,718 1336,718 1336,742 1118,742
+    " />
+    <!-- L.L.Bean (s_593eeadd5170d16f2c0000a2) -->
+    <path id="zone-llbean" class="zone-anchor" d="
+      M 1118,742 L 1236,742 L 1236,808 L 1276,842 L 1358,842 L 1358,856
+      L 1394,856 L 1394,874 L 1380,874 L 1380,938 L 1360,938 L 1360,966
+      C 1320,1012 1265,1035 1148,1048 L 1118,1048 Z
+    " />
+  </g>
+
+  <!-- 5. INLINE RETAIL & DINING ZONES (#layer-zones-l1) -->
+  <g id="layer-zones-l1">
+    <!-- === NORTH-WEST BLOCK === -->
+    <!-- LensCrafters / Fallon Vision Group (s_593eeadd5170d16f2c000071) -->
+    <polygon id="zone-lenscrafters" class="zone-tenant" points="
+      568,238 642,238 642,342 686,342 686,438 568,438
+    " />
+    <!-- Change Lingerie (s_593eeadd5170d16f2c000072) -->
+    <polygon id="zone-change-lingerie" class="zone-tenant" points="
+      686,238 732,238 732,438 686,438
+    " />
+    <!-- Tip Top Tailors (s_593eeadd5170d16f2c000073) -->
+    <polygon id="zone-tip-top" class="zone-tenant" points="
+      732,266 804,266 804,438 732,438
+    " />
+    <!-- Bentley (s_593eeadd5170d16f2c000062) -->
+    <polygon id="zone-bentley" class="zone-tenant" points="
+      804,312 858,312 858,438 804,438
+    " />
+    <!-- SoftMoc (s_5c1ba0c1b9c39d40c7000001) -->
+    <polygon id="zone-softmoc" class="zone-tenant-emphasized" points="
+      858,342 922,342 922,438 858,438
+    " />
+    <!-- Dental Office (s_593eeadd5170d16f2c000078) -->
+    <polygon id="zone-dental-office" class="zone-tenant" points="
+      850,188 952,188 952,266 850,266
+    " />
+    <!-- Total Beauty Essentials (s_593eeadd5170d16f2c000079) -->
+    <polygon id="zone-total-beauty" class="zone-tenant" points="
+      952,188 1040,188 1040,266 952,266
+    " />
+    <!-- North-West Corner Reserve (s_593eeadd5170d16f2c000084) -->
+    <polygon id="zone-nw-service-unit" class="zone-tenant" points="
+      930,266 1058,266 1058,348 968,282 930,282
+    " />
+    <!-- Specsavers (s_593eeadd5170d16f2c000076) -->
+    <polygon id="zone-specsavers" class="zone-tenant" points="
+      930,282 968,282 1058,348 1058,382 992,382 930,342
+    " />
+    <!-- Purdy's Chocolatier (s_593eeadd5170d16f2c000075) -->
+    <polygon id="zone-purdys" class="zone-tenant" points="
+      922,342 992,342 992,412 962,412 936,438 922,438
+    " />
+    <!-- Roots (s_593eeadd5170d16f2c000074) -->
+    <polygon id="zone-roots" class="zone-tenant" points="
+      992,382 1058,382 1058,412 992,412
+    " />
+
+    <!-- === NORTH-EAST BLOCK === -->
+    <!-- Calendar Club (s_593eeadd5170d16f2c000067) -->
+    <polygon id="zone-calendar-club" class="zone-tenant" points="
+      1222,282 1352,282 1352,438 1222,438
+    " />
+    <!-- Sportcentre (s_593eeadd5170d16f2c00007f) -->
+    <polygon id="zone-sportcentre" class="zone-tenant" points="
+      1352,282 1456,282 1456,438 1352,438
+    " />
+    <!-- Best Buy Express (s_593eeadd5170d16f2c000068) -->
+    <polygon id="zone-best-buy-express" class="zone-tenant" points="
+      1456,246 1516,246 1516,438 1456,438
+    " />
+
+    <!-- === SOUTH-WEST BLOCK === -->
+    <!-- Bluenotes (s_593eeadd5170d16f2c00006f) -->
+    <polygon id="zone-bluenotes" class="zone-tenant" points="
+      568,538 712,538 712,734 568,734
+    " />
+    <!-- South-West Inline Reserve (s_593eeadd5170d16f2c000086) -->
+    <polygon id="zone-sw-l1-unit" class="zone-tenant" points="
+      712,538 760,538 760,734 712,734
+    " />
+    <!-- Bath & Body Works (s_593eeadd5170d16f2c00006e) -->
+    <polygon id="zone-bath-body-works" class="zone-tenant" points="
+      760,538 836,538 836,704 760,704
+    " />
+    <!-- Carter's OshKosh (s_593eeadd5170d16f2c000070) -->
+    <polygon id="zone-carters-oshkosh" class="zone-tenant" points="
+      836,538 912,538 912,724 836,724
+    " />
+    <!-- Garage (s_596e90c75170d1157a000002) -->
+    <polygon id="zone-garage" class="zone-tenant" points="
+      912,538 968,538 996,568 996,650 912,650
+    " />
+    <!-- The Body Shop (s_593eeadd5170d16f2c00007a) -->
+    <polygon id="zone-the-body-shop" class="zone-tenant" points="
+      996,568 1058,568 1058,610 996,610
+    " />
+    <!-- Wireless Fix (s_5c1ba10fb9c39d40c7000002) -->
+    <polygon id="zone-wireless-fix" class="zone-tenant" points="
+      996,610 1058,610 1058,650 996,650
+    " />
+    <!-- Bank of Montreal (s_593eeadd5170d16f2c00007b) -->
+    <polygon id="zone-bmo" class="zone-tenant" points="
+      904,650 1058,650 1058,742 904,742
+    " />
+
+    <!-- === SOUTH-EAST BLOCK === -->
+    <!-- Pandora (s_593eeadd5170d16f2c000080) -->
+    <polygon id="zone-pandora" class="zone-tenant" points="
+      1144,538 1216,538 1216,598 1118,598 1118,564
+    " />
+    <!-- Freshly Squeezed (s_593eeadd5170d16f2c000069) -->
+    <polygon id="zone-freshly-squeezed" class="zone-tenant" points="
+      1216,538 1258,538 1258,598 1216,598
+    " />
+    <!-- Wireless Wave (s_593eeadd5170d16f2c00006a) -->
+    <polygon id="zone-wireless-wave" class="zone-tenant" points="
+      1258,538 1318,538 1318,598 1258,598
+    " />
+    <!-- Eyeconcept (s_593eeadd5170d16f2c00006b) -->
+    <polygon id="zone-eyeconcept" class="zone-tenant" points="
+      1318,538 1372,538 1372,664 1318,664
+    " />
+    <!-- TELUS (s_593eeadd5170d16f2c00006c) -->
+    <polygon id="zone-telus" class="zone-tenant" points="
+      1372,538 1436,538 1436,690 1404,690 1404,664 1372,664
+    " />
+    <!-- LIV Nail Bliss (s_593eeadd5170d16f2c000081) -->
+    <polygon id="zone-liv-nail-bliss" class="zone-tenant" points="
+      1436,538 1468,538 1468,734 1436,734
+    " />
+    <!-- Shoe Medic (s_593eeadd5170d16f2c000083) -->
+    <polygon id="zone-shoe-medic" class="zone-tenant" points="
+      1468,556 1492,556 1492,734 1468,734
+    " />
+    <!-- Tailor's Choice (s_593eeadd5170d16f2c000082) -->
+    <polygon id="zone-tailors-choice" class="zone-tenant" points="
+      1492,556 1516,556 1516,734 1492,734
+    " />
+
+    <!-- === SOUTH WING (WEST SIDE) === -->
+    <!-- HERC's Nutrition (s_593eeadd5170d16f2c000066) -->
+    <polygon id="zone-hercs-nutrition" class="zone-tenant" points="
+      950,742 1058,742 1058,798 950,798
+    " />
+    <!-- Urban Customz (s_593eeadd5170d16f2c0000a3) -->
+    <polygon id="zone-urban-customz" class="zone-tenant" points="
+      930,798 1058,798 1058,882 870,882 870,842 930,842
+    " />
+    <!-- Bell (s_593eeadd5170d16f2c00007c) -->
+    <polygon id="zone-bell" class="zone-tenant" points="
+      930,882 1058,882 1058,926 956,926
+    " />
+    <!-- Clip Hair Salon (s_593eeadd5170d16f2c00007d) -->
+    <polygon id="zone-clip" class="zone-tenant" points="
+      956,926 1058,926 1058,962 982,962
+    " />
+    <!-- Kernels (s_593eeadd5170d16f2c00007e) -->
+    <polygon id="zone-kernels" class="zone-tenant" points="
+      982,962 1058,962 1058,998 982,998
+    " />
+    <!-- Pearl Chinese Cuisine (s_593eeadd5170d16f2c0000a1) -->
+    <path id="zone-pearl" class="zone-tenant" d="
+      M 800,882 L 930,882 L 956,926 L 982,962 L 982,998 L 1058,998 L 1058,1048
+      L 1030,1048 L 1030,1042 C 920,1032 845,992 800,930 Z
+    " />
+  </g>
+
+  <!-- 6. FREESTANDING KIOSKS (#layer-kiosks-l1) -->
+  <g id="layer-kiosks-l1">
+    <!-- Cellicon (s_593eeadd5170d16f2c000088) -->
+    <rect id="kiosk-cellicon" class="zone-kiosk" x="780" y="482" width="36" height="18" />
+    <!-- Tbooth Wireless (s_593eeadd5170d16f2c000089) -->
+    <rect id="kiosk-tbooth" class="zone-kiosk" x="890" y="482" width="38" height="18" />
+    <!-- Danish Coffee Roasters (s_593eeadd5170d16f2c00008f) -->
+    <polygon id="kiosk-danish-coffee" class="zone-kiosk" points="956,496 970,482 984,496 970,510" />
+    <!-- Guest Services (s_593eeadd5170d16f2c00008a) -->
+    <rect id="kiosk-guest-services" class="zone-kiosk" x="986" y="530" width="54" height="14" />
+    <!-- North Corridor Kiosk 1 (s_593eeadd5170d16f2c00008b) -->
+    <rect id="kiosk-north-1" class="zone-kiosk" x="1084" y="254" width="16" height="24" />
+    <!-- North Corridor Kiosk 2 (s_593eeadd5170d16f2c00008e) -->
+    <rect id="kiosk-north-2" class="zone-kiosk" x="1084" y="302" width="16" height="28" />
+    <!-- North Corridor Kiosk 3 (s_5dc2fe8563f9f47096000003) -->
+    <rect id="kiosk-north-3" class="zone-kiosk" x="1072" y="394" width="32" height="28" />
+    <!-- Mobile Care (s_593eeadd5170d16f2c00008c) -->
+    <rect id="kiosk-mobile-care" class="zone-kiosk" x="1282" y="476" width="38" height="18" />
+    <!-- West Corridor Kiosk (s_593eeadd5170d16f2c000087) -->
+    <rect id="kiosk-west-corridor" class="zone-kiosk" x="684" y="482" width="38" height="18" />
+  </g>
+
+  <!-- 7. AMENITIES (#layer-amenities-l1) -->
+  <g id="layer-amenities-l1">
+    <!-- L1 Restrooms (s_5c7d83f5b9c39d0d88000000) -->
+    <rect id="amenity-restrooms-l1" class="zone-washroom" x="858" y="266" width="64" height="66" />
+  </g>
+
+  <!-- 8. VERTICAL CONNECTORS (#layer-connectors-l1 - Aligned 1:1 with L2) -->
+  <g id="layer-connectors-l1">
+    <!-- West Stairs (c_59406bdb5170d126a8000001 / s_593eeadd5170d16f2c0000ad) -->
+    <rect id="conn-stairs-west" class="zone-connector" x="620" y="486" width="52" height="28" />
+    <!-- Central North Escalator (c_59406bb65170d126a8000000 / s_593eeadd5170d16f2c0000ab) -->
+    <rect id="conn-esc-north" class="zone-connector" x="968" y="430" width="72" height="14" />
+    <!-- Central Elevator (c_59947423db68ef1aaf000003 / s_5994819fdb68ef1aaf00000d) -->
+    <polygon id="conn-elevator" class="zone-connector" points="958,476 976,492 958,508 942,492" />
+    <!-- Central South Escalator (c_5976568a51cd103d80000000 / s_593eeadd5170d16f2c0000aa) -->
+    <rect id="conn-esc-south" class="zone-connector" x="968" y="514" width="72" height="14" />
+    <!-- East Stairs (c_5976582b51cd103d80000002 / s_593eeadd5170d16f2c0000ac) -->
+    <rect id="conn-stairs-east" class="zone-connector" x="1412" y="456" width="52" height="28" />
+    <!-- South Wing Escalator (c_597657dd51cd103d80000001 / s_593eeadd5170d16f2c0000a9) -->
+    <rect id="conn-esc-south-wing" class="zone-connector" x="1068" y="808" width="14" height="44" />
+  </g>
+
+  <!-- 9. OUTER PERIMETER WALL (#layer-walls-l1 - Single Closed Path, No Sub-Paths) -->
+  <g id="layer-walls-l1">
+    <path id="wall-perimeter-l1" class="perimeter-wall" d="
+      M 88,215 L 304,215 L 316,228 L 382,228 L 394,215 L 568,215
+      L 568,238 L 850,238 L 850,188 L 1040,188 L 1110,118 L 1110,36
+      L 1456,36 L 1456,188 L 1516,188 L 1516,228 L 1700,228 L 1700,188
+      L 1948,188 L 1948,380 L 1930,460 L 1930,620 L 1890,730 L 1710,730
+      L 1630,750 L 1516,750 L 1516,734 L 1236,734 L 1236,808 L 1276,842
+      L 1358,842 L 1358,856 L 1394,856 L 1394,874 L 1380,874 L 1380,938
+      L 1360,938 L 1360,966 C 1320,1012 1265,1035 1148,1048 L 1148,1056
+      L 1030,1056 L 1030,1042 C 920,1032 845,992 800,930 L 800,894
+      L 776,894 L 776,842 L 844,842 L 870,818 L 924,818 L 950,792
+      L 950,734 L 568,734 L 568,768 L 476,768 L 414,744 L 340,744
+      L 278,768 L 126,768 L 126,434 L 24,352 L 24,328 L 88,328 Z
+    " />
+  </g>
+</svg>
